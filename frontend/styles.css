@@ -1,0 +1,554 @@
+/* ===========================
+   GLOBAL STYLES
+   =========================== */
+
+* {
+    box-sizing: border-box;
+}
+
+/* Page background and text color */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f8e7;
+    /* Light green background */
+    color: #2e7d32;
+    /* Dark green text */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* ===========================
+   HEADER (Top Navigation Bar)
+   =========================== */
+
+header {
+    background-color: #4caf50;
+    /* Medium green */
+    color: rgb(5, 60, 13);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Main title "To-Do Checklists" */
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* Container for Register/Login buttons and user info */
+.header-buttons {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+/* Displays logged-in user name */
+#userInfo {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Register, Login, Logout buttons in header */
+header button {
+    background-color: #043806;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+header button:hover {
+    background-color: #57a05a;
+}
+
+/* ===========================
+   MAIN LAYOUT (Sidebar + Content)
+   =========================== */
+
+/* Container for sidebar and main content area */
+.container {
+    display: flex;
+    min-height: 90vh;
+    width: 90%;
+    margin: 2rem auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ===========================
+   SIDEBAR (Left panel with checklist names)
+   =========================== */
+
+aside {
+    width: 250px;
+    background-color: #e8f5e8;
+    /* Very light green */
+    padding: 1rem;
+    border-right: 1px solid #c8e6c9;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+/* "+ New Checklist" button in sidebar */
+aside button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+aside button:hover {
+    background-color: #45a049;
+}
+
+/* Search field for filtering checklist names in the sidebar */
+#checklistSearch {
+    width: 100%;
+    margin-bottom: 0.75rem;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+#checklistSearch:focus {
+    outline: none;
+    border-color: #4caf50;
+}
+
+/* List of all user's checklists */
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    overflow-y: auto;
+}
+
+#checklistsStockBtn {
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+#stockView h2 {
+    margin-top: 0;
+    color: #2e7d32;
+}
+
+#stockList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 0.75rem;
+    margin: 1rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+#stockList li.stock-template-card {
+    border: 1px solid #c8e6c9;
+    border-radius: 10px;
+    padding: 0.75rem;
+    background-color: #f8fff8;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+
+#stockList li.stock-template-card:hover {
+    border-color: #4caf50;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);
+}
+
+#stockList li.stock-template-card.active {
+    border-color: #2e7d32;
+    box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.15);
+}
+
+.stock-template-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.stock-template-name {
+    font-weight: 600;
+    cursor: pointer;
+    color: #2e7d32;
+}
+
+.stock-template-meta {
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+    color: #4b6b4d;
+}
+
+#stockPreviewPanel {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #c8e6c9;
+    border-radius: 10px;
+    background-color: #fbfffb;
+}
+
+#stockPreviewTitle {
+    margin: 0 0 0.75rem 0;
+    color: #2e7d32;
+}
+
+#stockItemsPreview {
+    list-style: disc;
+    margin: 0;
+    padding-left: 1rem;
+    list-style-position: inside;
+}
+
+#stockItemsPreview li {
+    margin-bottom: 0.4rem;
+    border: none;
+    padding: 0;
+    cursor: default;
+}
+
+#addStockToMyChecklistsBtn {
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+/* Individual checklist name in sidebar */
+aside li {
+    padding: 0.75rem;
+    cursor: pointer;
+    border-bottom: 1px solid #c8e6c9;
+    border-radius: 4px;
+    margin-bottom: 0.25rem;
+    transition: background-color 0.3s;
+}
+
+aside li:hover {
+    background-color: #c8e6c9;
+}
+
+/* Edit icon in sidebar and items */
+.edit-icon {
+    margin-left: 0.5rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.edit-icon:hover {
+    opacity: 1;
+}
+
+/* Delete icon in sidebar */
+.delete-icon {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    color: #f44336;
+}
+
+.delete-icon:hover {
+    opacity: 1;
+    color: #d32f2f;
+}
+
+/* ===========================
+   MAIN CONTENT AREA
+   =========================== */
+
+/* Main content area (right side of layout) */
+main {
+    flex: 1;
+    padding: 2rem;
+    background-color: white;
+}
+
+/* Welcome message when no checklist selected */
+#welcome {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #4caf50;
+}
+
+/* Checklist title */
+#checklistView h2 {
+    margin-top: 0;
+    color: #2e7d32;
+    border-bottom: 2px solid #4caf50;
+    padding-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ===========================
+   CHECKLIST ITEMS
+   =========================== */
+
+/* Container for all items in a checklist */
+#itemsList {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+/* Single to-do item row (checkbox + text + delete button) */
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #e8f5e8;
+    border-radius: 4px;
+    background-color: #fafafa;
+    justify-content: space-between;
+}
+
+/* Left container for checkbox and text */
+.item>div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+}
+
+/* Checkbox for marking item as done */
+.item input[type="checkbox"] {
+    margin-right: 0.75rem;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* Text input for item name/description */
+.item input[type="text"] {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #c8e6c9;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+/* Text span for item name/description */
+.item .item-text {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+    cursor: default;
+}
+
+/* Focus state for item text input */
+.item input[type="text"]:focus {
+    outline: none;
+    border-color: #4caf50;
+}
+
+/* Item when marked as done */
+.item.done {
+    background-color: #e8f5e8;
+    border-color: #4caf50;
+}
+
+/* Text styling for completed item (strikethrough) */
+.item.done .item-text {
+    text-decoration: line-through;
+    color: #666;
+}
+
+/* Delete button for individual item */
+.item button {
+    margin-left: 0.5rem;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.item button:hover {
+    background-color: #d32f2f;
+}
+
+/* ===========================
+   GENERAL BUTTONS
+   =========================== */
+
+/* All buttons (Add Item, Delete Checklist, etc.) */
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* ===========================
+   MODAL DIALOGS (Registration, Login, Messages)
+   =========================== */
+
+/* Modal overlay (dark background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Show modal when active */
+.modal.show {
+    display: block;
+}
+
+/* Modal content box (white card with form/message) */
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 2rem;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Title in modal (Register, Login, etc.) */
+.modal-content h2 {
+    margin-top: 0;
+    color: #2e7d32;
+    text-align: center;
+}
+
+/* Form inside modal */
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Input fields in modal (name, phone, etc.) */
+.modal-content input {
+    padding: 0.75rem;
+    border: 1px solid #c8e6c9;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Focus state for modal inputs */
+.modal-content input:focus {
+    outline: none;
+    border-color: #4caf50;
+}
+
+/* Submit button in modal */
+.modal-content button {
+    background-color: #4caf50;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+/* Close button (X) in modal top-right */
+.close {
+    color: #999;
+    float: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN (Mobile devices)
+   =========================== */
+
+@media (max-width: 768px) {
+
+    /* Stack layout vertically on mobile */
+    .container {
+        flex-direction: column;
+        width: 95%;
+        min-height: auto;
+    }
+
+    /* Header items stack vertically */
+    header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Buttons wrap on small screens */
+    .header-buttons {
+        flex-wrap: wrap;
+    }
+
+    /* Sidebar becomes full-width on top */
+    aside {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #c8e6c9;
+    }
+
+    /* Main content area padding reduced */
+    main {
+        padding: 1rem;
+    }
+
+    /* Items stack vertically on mobile */
+    .item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Item text takes full width */
+    .item input[type="text"] {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Delete button aligns to right */
+    .item button {
+        align-self: flex-end;
+    }
+
+    /* Modal takes up more space on mobile */
+    .modal-content {
+        width: 95%;
+    }
+}

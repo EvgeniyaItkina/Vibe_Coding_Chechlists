@@ -1,0 +1,130 @@
+{
+  "checklists": [
+    {
+      "id": "1",
+      "name": "Hospital Discharge Checklist",
+      "items": [
+        { "id": "1", "text": "Baby clothes set (bodysuit, hat, socks)", "done": false },
+        { "id": "2", "text": "Warm blanket and weather-appropriate outer layer", "done": false },
+        { "id": "3", "text": "Car seat installed and adjusted", "done": false },
+        { "id": "4", "text": "Mother's discharge documents and ID", "done": false },
+        { "id": "5", "text": "Baby health records and hospital papers", "done": false },
+        { "id": "6", "text": "Phone chargers and personal belongings packed", "done": false },
+        { "id": "7", "text": "Feeding essentials (bottle/formula if needed)", "done": false },
+        { "id": "8", "text": "Route home and pickup timing confirmed", "done": false }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "BBQ Trip (2-3 Hours)",
+      "items": [
+        { "id": "1", "text": "Meat/vegetables for grilling", "done": false },
+        { "id": "2", "text": "Marinade, salt, pepper, and basic spices", "done": false },
+        { "id": "3", "text": "Charcoal or gas canister and lighter/matches", "done": false },
+        { "id": "4", "text": "Skewers, grill grate, and tongs", "done": false },
+        { "id": "5", "text": "Disposable plates, cups, and napkins", "done": false },
+        { "id": "6", "text": "Drinking water and beverages", "done": false },
+        { "id": "7", "text": "Trash bags and wet wipes", "done": false },
+        { "id": "8", "text": "Blanket/chairs and insect repellent", "done": false }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Abroad Trip (2 Days)",
+      "items": [
+        { "id": "1", "text": "Passport and visas (if required)", "done": false },
+        { "id": "2", "text": "Tickets, booking confirmations, insurance", "done": false },
+        { "id": "3", "text": "Wallet, cards, and some local currency", "done": false },
+        { "id": "4", "text": "Phone, charger, and power adapter", "done": false },
+        { "id": "5", "text": "2-day clothes set and comfortable shoes", "done": false },
+        { "id": "6", "text": "Toiletries and personal medication", "done": false },
+        { "id": "7", "text": "Important contacts and offline maps", "done": false },
+        { "id": "8", "text": "Mini first-aid kit and hand sanitizer", "done": false }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Cook Scrambled Eggs",
+      "items": [
+        { "id": "1", "text": "Take 2-3 eggs", "done": false },
+        { "id": "2", "text": "Crack eggs into a bowl", "done": false },
+        { "id": "3", "text": "Add a pinch of salt and pepper", "done": false },
+        { "id": "4", "text": "Whisk until smooth", "done": false },
+        { "id": "5", "text": "Preheat pan with butter or oil", "done": false },
+        { "id": "6", "text": "Pour egg mix into the pan", "done": false },
+        { "id": "7", "text": "Stir gently on low-medium heat", "done": false },
+        { "id": "8", "text": "Remove from heat while still creamy", "done": false }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Gym Workout (Basic)",
+      "items": [
+        { "id": "1", "text": "Workout clothes and shoes", "done": false },
+        { "id": "2", "text": "Water bottle", "done": false },
+        { "id": "3", "text": "Towel", "done": false },
+        { "id": "4", "text": "Headphones", "done": false },
+        { "id": "5", "text": "Warm-up (5-10 minutes)", "done": false },
+        { "id": "6", "text": "Main exercises (strength/cardio)", "done": false },
+        { "id": "7", "text": "Stretching after workout", "done": false },
+        { "id": "8", "text": "Shower and change clothes", "done": false }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Workday Setup",
+      "items": [
+        { "id": "1", "text": "Open laptop and connect to Wi-Fi", "done": false },
+        { "id": "2", "text": "Check emails and messages", "done": false },
+        { "id": "3", "text": "Review tasks for the day", "done": false },
+        { "id": "4", "text": "Prioritize top 3 tasks", "done": false },
+        { "id": "5", "text": "Prepare needed documents/tools", "done": false },
+        { "id": "6", "text": "Start with the hardest task", "done": false },
+        { "id": "7", "text": "Take short breaks", "done": false },
+        { "id": "8", "text": "Review progress at the end of day", "done": false }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Cleaning Apartment (Quick)",
+      "items": [
+        { "id": "1", "text": "Open windows for ventilation", "done": false },
+        { "id": "2", "text": "Collect trash", "done": false },
+        { "id": "3", "text": "Wipe surfaces", "done": false },
+        { "id": "4", "text": "Vacuum floors", "done": false },
+        { "id": "5", "text": "Mop floors", "done": false },
+        { "id": "6", "text": "Clean bathroom sink and mirror", "done": false },
+        { "id": "7", "text": "Organize items", "done": false },
+        { "id": "8", "text": "Take out trash", "done": false }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Date Night Preparation",
+      "items": [
+        { "id": "1", "text": "Choose outfit", "done": false },
+        { "id": "2", "text": "Shower and grooming", "done": false },
+        { "id": "3", "text": "Light perfume", "done": false },
+        { "id": "4", "text": "Check location and time", "done": false },
+        { "id": "5", "text": "Charge phone", "done": false },
+        { "id": "6", "text": "Prepare payment method", "done": false },
+        { "id": "7", "text": "Leave on time", "done": false },
+        { "id": "8", "text": "Relax and enjoy", "done": false }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Weekly Groceries",
+      "items": [
+        { "id": "1", "text": "Check fridge and pantry", "done": false },
+        { "id": "2", "text": "Make shopping list", "done": false },
+        { "id": "3", "text": "Buy vegetables and fruits", "done": false },
+        { "id": "4", "text": "Buy protein (meat/fish/eggs)", "done": false },
+        { "id": "5", "text": "Buy bread and grains", "done": false },
+        { "id": "6", "text": "Buy snacks and drinks", "done": false },
+        { "id": "7", "text": "Check discounts", "done": false },
+        { "id": "8", "text": "Store products properly", "done": false }
+      ]
+    }
+  ]
+}

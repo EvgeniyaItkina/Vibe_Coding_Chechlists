@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do Checklists</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>To-Do Checklists</h1>
+        <div class="header-buttons">
+            <button id="registerBtn">Register</button>
+            <button id="loginBtn">Login</button>
+            <button id="logoutBtn" style="display: none;">Logout</button>
+            <span id="userInfo"></span>
+        </div>
+    </header>
+    <div class="container">
+        <aside id="sidebar">
+            <button id="newChecklistBtn" style="display: none;">+ New Checklist</button>
+            <input
+                type="text"
+                id="checklistSearch"
+                placeholder="Search checklists..."
+                style="display: none;"
+            >
+            <ul id="checklistList"></ul>
+            <button id="checklistsStockBtn" style="display: none; width: 100%;">Checklists Stock</button>
+        </aside>
+        <main id="main">
+            <div id="welcome">Please register or login to start.</div>
+            <div id="checklistView" style="display: none;">
+                <h2 id="checklistTitle"></h2>
+                <ul id="itemsList"></ul>
+                <button id="addItemBtn">+ Add Item</button>
+            </div>
+            <div id="stockView" style="display: none;">
+                <h2>Checklists Stock</h2>
+                <ul id="stockList"></ul>
+                <div id="stockPreviewPanel">
+                    <h3 id="stockPreviewTitle">Template Items Preview</h3>
+                    <ul id="stockItemsPreview"></ul>
+                </div>
+                <button id="addStockToMyChecklistsBtn" disabled>Add to my Checklists</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Registration Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Register</h2>
+            <form id="registerForm">
+                <input type="text" id="registerName" placeholder="Enter your name" required>
+                <input type="tel" id="registerPhone" placeholder="Enter your phone" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" id="loginName" placeholder="Enter your name" required>
+                <input type="tel" id="loginPhone" placeholder="Enter your phone" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Message Modal -->
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <h2 id="messageTitle">Message</h2>
+            <p id="messageText"></p>
+            <button id="messageOkBtn">OK</button>
+        </div>
+    </div>
+
+    <!-- New Checklist Modal -->
+    <div id="newChecklistModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create New Checklist</h2>
+            <form id="newChecklistForm">
+                <input type="text" id="checklistName" placeholder="Enter checklist name" required>
+                <button type="submit">Create</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit Checklist Modal -->
+    <div id="editChecklistModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Checklist Name</h2>
+            <form id="editChecklistForm">
+                <input type="text" id="editChecklistName" placeholder="Enter new checklist name" required>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit Item Modal -->
+    <div id="editItemModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Item</h2>
+            <form id="editItemForm">
+                <input type="text" id="editItemText" placeholder="Enter new item text" required>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- New Item Modal -->
+    <div id="newItemModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add Item</h2>
+            <form id="newItemForm">
+                <input type="text" id="newItemText" placeholder="Enter item text" required>
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>

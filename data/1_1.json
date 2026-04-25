@@ -1,0 +1,133 @@
+{
+  "id": "1",
+  "name": "1",
+  "phone": "1",
+  "checklists": [
+    {
+      "id": "1",
+      "name": "Поездки++",
+      "items": [
+        {
+          "id": "1",
+          "text": "New Item",
+          "done": false
+        },
+        {
+          "id": "2",
+          "text": "New Item",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "екн",
+      "items": []
+    },
+    {
+      "id": "3",
+      "name": "Поездки43",
+      "items": [
+        {
+          "id": "1776964312113",
+          "text": "екн",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "1776966599784_0",
+      "name": "Hospital",
+      "sourceTemplateId": "1",
+      "items": [
+        {
+          "id": "1776966599784_0_0",
+          "text": "Baby clothes set (bodysuit, hat, socks)",
+          "done": false
+        },
+        {
+          "id": "1776966599784_0_1",
+          "text": "Warm blanket and weather-appropriate outer layer",
+          "done": false
+        },
+        {
+          "id": "1776966599784_0_2",
+          "text": "Car seat installed and adjusted",
+          "done": false
+        },
+        {
+          "id": "1776966599784_0_3",
+          "text": "Mother's discharge documents and ID",
+          "done": false
+        },
+        {
+          "id": "1776966599784_0_4",
+          "text": "Baby health records and hospital papers",
+          "done": true
+        },
+        {
+          "id": "1776966599784_0_5",
+          "text": "Phone chargers and personal belongings packed",
+          "done": false
+        },
+        {
+          "id": "1776966599784_0_6",
+          "text": "Feeding essentials (bottle/formula if needed)",
+          "done": false
+        },
+        {
+          "id": "1776966599784_0_7",
+          "text": "Route home and pickup timing confirmed",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "1776966956788_0",
+      "name": "Hospital Discharge Checklist",
+      "sourceTemplateId": "1",
+      "items": [
+        {
+          "id": "1776966956788_0_0",
+          "text": "Baby clothes set (bodysuit, hat, socks)",
+          "done": false
+        },
+        {
+          "id": "1776966956788_0_1",
+          "text": "Warm blanket and weather-appropriate outer layer",
+          "done": false
+        },
+        {
+          "id": "1776966956788_0_2",
+          "text": "Car seat installed and adjusted",
+          "done": false
+        },
+        {
+          "id": "1776966956788_0_3",
+          "text": "Mother's discharge documents and ID",
+          "done": false
+        },
+        {
+          "id": "1776966956788_0_4",
+          "text": "Baby health records and hospital papers",
+          "done": false
+        },
+        {
+          "id": "1776966956788_0_5",
+          "text": "Phone chargers and personal belongings packed",
+          "done": false
+        },
+        {
+          "id": "1776966956788_0_6",
+          "text": "Feeding essentials (bottle/formula if needed)",
+          "done": false
+        },
+        {
+          "id": "1776966956788_0_7",
+          "text": "Route home and pickup timing confirmed",
+          "done": false
+        }
+      ]
+    }
+  ]
+}
