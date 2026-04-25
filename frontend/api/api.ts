@@ -3,7 +3,7 @@ import { User, Checklist, Item } from '../models/models.js';
 
 
 // Central API base URL for all frontend requests.
-const API_URL = 'http://localhost:3000/api';
+const API_URL = '/api';
 
 export interface TemplateSummary {
     id: string;
