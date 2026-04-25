@@ -26,7 +26,8 @@ export async function registerUser(name: string, phone: string): Promise<User | 
         });
 
         if (!response.ok) {
-        return null;
+            const data = await response.json();
+            throw new Error(data.error || 'Registration failed');
         }
 
         const data = await response.json();
@@ -45,7 +46,7 @@ export async function registerUser(name: string, phone: string): Promise<User | 
  * @returns Promise<User | null> - User object if login successful, null otherwise
  */
 export async function loginUser(name: string, phone: string): Promise<User | null> {
-    
+
     try {
         const response = await fetch(`${API_URL}/login`, {
             method: 'POST',
@@ -141,10 +142,10 @@ export async function updateChecklistName(checklistId: string, newName: string):
         const response = await fetch(`${API_URL}/checklists/${checklistId}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ 
-                newName, 
-                userName: currentUser.name, 
-                userPhone: currentUser.phone 
+            body: JSON.stringify({
+                newName,
+                userName: currentUser.name,
+                userPhone: currentUser.phone
             })
         });
         if (!response.ok) {
@@ -190,7 +191,7 @@ export async function addItem(checklistId: string, text: string): Promise<Item |
         console.error('Add item error:', error);
         throw error;
     }
-    
+
 }
 
 /**
