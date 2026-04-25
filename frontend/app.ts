@@ -106,9 +106,13 @@ function setupAuthForms() {
 
         if (!name || !phone) return;
 
-        const isSuccess = await registerUser(name, phone);
-        if (isSuccess) {
-            closeModal('registerModal');
+        try {
+            const isSuccess = await registerUser(name, phone);
+            if (isSuccess) {
+                closeModal('registerModal');
+            }
+        } catch (error: any) {
+            showMessage('Error', error.message);
         }
     });
 }

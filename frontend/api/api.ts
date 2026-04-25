@@ -27,7 +27,7 @@ export async function registerUser(name: string, phone: string): Promise<User | 
 
         if (!response.ok) {
             const data = await response.json();
-            throw new Error(data.error || 'Registration failed');
+            throw new Error(data.message || 'Registration failed');
         }
 
         const data = await response.json();
@@ -35,7 +35,7 @@ export async function registerUser(name: string, phone: string): Promise<User | 
 
     } catch (error) {
         console.error('Registration error:', error);
-        return null;
+        throw error;
     }
 }
 
